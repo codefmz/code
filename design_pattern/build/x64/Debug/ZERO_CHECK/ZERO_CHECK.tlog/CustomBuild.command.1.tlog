@@ -1,0 +1,10 @@
+^E:\CODE\COMPUTER_BASE\DESIGN_PATTERN\BUILD\CMAKEFILES\FB1550246F924BBE55A7ED1607BBA942\GENERATE.STAMP.RULE
+setlocal
+D:\code_install_package\cmake\bin\cmake.exe -SE:/Code/computer_base/design_pattern -BE:/Code/computer_base/design_pattern/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/Code/computer_base/design_pattern/build/degin_pattern.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

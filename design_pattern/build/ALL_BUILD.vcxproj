@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{21D4394D-B863-3154-8084-219756BEAA0D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Code\computer_base\design_pattern\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Code\computer_base\design_pattern\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Code\computer_base\design_pattern\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Code\computer_base\design_pattern\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Code\computer_base\design_pattern\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/Code/computer_base/design_pattern/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\code_install_package\cmake\bin\cmake.exe -SE:/Code/computer_base/design_pattern -BE:/Code/computer_base/design_pattern/build --check-stamp-file E:/Code/computer_base/design_pattern/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeCInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeRCInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Compiler\MSVC.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;E:\Code\computer_base\design_pattern\build\CMakeFiles\3.27.4\CMakeCCompiler.cmake;E:\Code\computer_base\design_pattern\build\CMakeFiles\3.27.4\CMakeCXXCompiler.cmake;E:\Code\computer_base\design_pattern\build\CMakeFiles\3.27.4\CMakeRCCompiler.cmake;E:\Code\computer_base\design_pattern\build\CMakeFiles\3.27.4\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Code\computer_base\design_pattern\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/Code/computer_base/design_pattern/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\code_install_package\cmake\bin\cmake.exe -SE:/Code/computer_base/design_pattern -BE:/Code/computer_base/design_pattern/build --check-stamp-file E:/Code/computer_base/design_pattern/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeCInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeRCInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Compiler\MSVC.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;E:\Code\computer_base\design_pattern\build\CMakeFiles\3.27.4\CMakeCCompiler.cmake;E:\Code\computer_base\design_pattern\build\CMakeFiles\3.27.4\CMakeCXXCompiler.cmake;E:\Code\computer_base\design_pattern\build\CMakeFiles\3.27.4\CMakeRCCompiler.cmake;E:\Code\computer_base\design_pattern\build\CMakeFiles\3.27.4\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Code\computer_base\design_pattern\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/Code/computer_base/design_pattern/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\code_install_package\cmake\bin\cmake.exe -SE:/Code/computer_base/design_pattern -BE:/Code/computer_base/design_pattern/build --check-stamp-file E:/Code/computer_base/design_pattern/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeCInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeRCInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Compiler\MSVC.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;E:\Code\computer_base\design_pattern\build\CMakeFiles\3.27.4\CMakeCCompiler.cmake;E:\Code\computer_base\design_pattern\build\CMakeFiles\3.27.4\CMakeCXXCompiler.cmake;E:\Code\computer_base\design_pattern\build\CMakeFiles\3.27.4\CMakeRCCompiler.cmake;E:\Code\computer_base\design_pattern\build\CMakeFiles\3.27.4\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Code\computer_base\design_pattern\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/Code/computer_base/design_pattern/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\code_install_package\cmake\bin\cmake.exe -SE:/Code/computer_base/design_pattern -BE:/Code/computer_base/design_pattern/build --check-stamp-file E:/Code/computer_base/design_pattern/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeCInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeRCInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Compiler\MSVC.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\Windows.cmake;D:\code_install_package\cmake\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;E:\Code\computer_base\design_pattern\build\CMakeFiles\3.27.4\CMakeCCompiler.cmake;E:\Code\computer_base\design_pattern\build\CMakeFiles\3.27.4\CMakeCXXCompiler.cmake;E:\Code\computer_base\design_pattern\build\CMakeFiles\3.27.4\CMakeRCCompiler.cmake;E:\Code\computer_base\design_pattern\build\CMakeFiles\3.27.4\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Code\computer_base\design_pattern\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\ZERO_CHECK.vcxproj">
+      <Project>{0A973B03-7920-3176-B392-7F0C41A6B46E}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\bridge\libbridge.vcxproj">
+      <Project>{B885E856-D158-355B-B5A3-88638FB5078E}</Project>
+      <Name>libbridge</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\builder\libbuilder.vcxproj">
+      <Project>{963F4D7B-88A7-3D22-9842-188F3FE46DD4}</Project>
+      <Name>libbuilder</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\command\libcommand.vcxproj">
+      <Project>{6373AEF3-2BCF-34ED-A3B6-32219B5CA8EF}</Project>
+      <Name>libcommand</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\component\libcomponent.vcxproj">
+      <Project>{5895284A-A023-3108-9793-2AD7B6F52916}</Project>
+      <Name>libcomponent</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\decorate\libdecorate.vcxproj">
+      <Project>{4A2E46E0-13BD-3861-A659-FCCFBCF2ACE2}</Project>
+      <Name>libdecorate</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\facade\libfacade.vcxproj">
+      <Project>{F9C4C58A-1C43-3BE8-AFDC-F757AD7D0934}</Project>
+      <Name>libfacade</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\factory\libfactory.vcxproj">
+      <Project>{1FBB9EF9-8F42-3172-96B7-3287B97A8BED}</Project>
+      <Name>libfactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\flywight\libflyWight.vcxproj">
+      <Project>{D37DB060-0058-331E-925B-B1291101D72D}</Project>
+      <Name>libflyWight</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\handle\libhandle.vcxproj">
+      <Project>{27FD136F-3002-3EDD-AEE0-4405E6DEB95F}</Project>
+      <Name>libhandle</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\interpreter\libinterpreter.vcxproj">
+      <Project>{49EAA749-E171-3A01-BE47-6EC3CCF59ECA}</Project>
+      <Name>libinterpreter</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\mediator\libmediator.vcxproj">
+      <Project>{C6F9C96B-47E2-37C6-BFEC-10541A6F86BC}</Project>
+      <Name>libmediator</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\memento\libmemento.vcxproj">
+      <Project>{3064EFBE-1AD8-35AF-B459-3E237919D1CA}</Project>
+      <Name>libmemento</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\observer\libobserver.vcxproj">
+      <Project>{02334A23-C3BC-3799-A78F-81F44422000B}</Project>
+      <Name>libobserver</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\prototype\libprototype.vcxproj">
+      <Project>{A361112D-6849-3CBF-80C6-402E327320CE}</Project>
+      <Name>libprototype</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\proxy\libproxy.vcxproj">
+      <Project>{5A7D0036-9259-3A0D-912B-F8A71DF8E555}</Project>
+      <Name>libproxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\simple_factory\libsimple_factory.vcxproj">
+      <Project>{F4E52194-0A60-3D0C-BF0B-F35F85EBC0DD}</Project>
+      <Name>libsimple_factory</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\singleton\libsingleton.vcxproj">
+      <Project>{266F05DB-D70F-3EDF-85BD-73048E4E5CCA}</Project>
+      <Name>libsingleton</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\state\libstate.vcxproj">
+      <Project>{E7A20E24-656E-33CB-8B56-9E50CA8C11CA}</Project>
+      <Name>libstate</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\strategy\libstrategy.vcxproj">
+      <Project>{FCE42900-F238-350D-8E2F-A6A10CB313D0}</Project>
+      <Name>libstrategy</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\template\libtemplate.vcxproj">
+      <Project>{997FF2BE-CBB7-3C6A-AD3B-E05A2FAD17E7}</Project>
+      <Name>libtemplate</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\src\visit\libvisit.vcxproj">
+      <Project>{B751EBD9-C7E1-34A0-82EC-0D60DBA593B3}</Project>
+      <Name>libvisit</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Code\computer_base\design_pattern\build\visit.vcxproj">
+      <Project>{3D219B58-1D34-30D7-98A8-E830A8E133E7}</Project>
+      <Name>visit</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

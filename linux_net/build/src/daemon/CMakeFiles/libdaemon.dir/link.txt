@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../lib/liblibdaemon.a  CMakeFiles/libdaemon.dir/daemon.cpp.o
+/usr/bin/ranlib ../../../lib/liblibdaemon.a

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g -pthread   CMakeFiles/daemon.dir/main.cpp.o  -o ../bin/daemon  -L/usr/fmw/linux_net/lib -Wl,-rpath,/usr/fmw/linux_net/lib -lgtest ../lib/liblibdaemon.a -Wl,--whole-archive ../lib/liblibdaemon.a -Wl,--no-whole-archive 
