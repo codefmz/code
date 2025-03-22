@@ -1,0 +1,1 @@
+int self_mul(int a, int b);

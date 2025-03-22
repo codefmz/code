@@ -1,0 +1,9 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#cmakedefine USE_MY_STATIC_OUT
+#cmakedefine TEST_CMAKE_DEFINE_OFF_EFFECT
+#define TEST_VARIABLE_NAME ${TEST_VARIABLE_VALUE}
+#define FILE_DIR "@CMAKE_SOURCE_DIR@"
+
+#endif
