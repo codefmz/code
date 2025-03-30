@@ -50,6 +50,9 @@ dkms.conf
 ### VisualStudioCode ###
 .vscode/*
 
+# build directory
+build*/
+
 # Local History for Visual Studio Code
 .history/
 

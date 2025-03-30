@@ -14,7 +14,7 @@ protected:
     }
 };
 
-//´´½¨Èı½ÇĞÎ£¬Æ¬¶Î×ÅÉ«Æ÷Ê¹ÓÃ´Ó¶¥µã×ÅÉ«Æ÷¶¨ÒåµÄÑÕÉ«
+//åˆ›å»ºä¸‰è§’å½¢ï¼Œç‰‡æ®µç€è‰²å™¨ä½¿ç”¨ä»é¡¶ç‚¹ç€è‰²å™¨å®šä¹‰çš„é¢œè‰²
 TEST_F(shaderTest, createTrangleUseVertexColor)
 {
     initGLFW();
@@ -71,7 +71,7 @@ TEST_F(shaderTest, createTrangleUseVertexColor)
     glfwTerminate();
 }
 
-//´´½¨Èı½ÇĞÎ£¬Ê¹ÓÃUniform¶¯Ì¬ĞŞ¸ÄÈı½ÇĞÎµÄÑÕÉ«
+//åˆ›å»ºä¸‰è§’å½¢ï¼Œä½¿ç”¨UniformåŠ¨æ€ä¿®æ”¹ä¸‰è§’å½¢çš„é¢œè‰²
 TEST_F(shaderTest, createTrangleUseUniform)
 {
     initGLFW();
@@ -114,7 +114,7 @@ TEST_F(shaderTest, createTrangleUseUniform)
 
         shader.use();
 
-        // ¸üĞÂuniformÑÕÉ«
+        // æ›´æ–°uniformé¢œè‰²
         float timeValue = glfwGetTime();
         float greenValue = sin(timeValue) / 2.0f + 0.5f;
         int vertexColorLocation = glGetUniformLocation(shader.ID, "ourColor");
@@ -134,7 +134,7 @@ TEST_F(shaderTest, createTrangleUseUniform)
     glfwTerminate();
 }
 
-//´´½¨Èı½ÇĞÎ£¬Ã¿¸öµãÓĞ²»Í¬µÄÑÕÉ«
+//åˆ›å»ºä¸‰è§’å½¢ï¼Œæ¯ä¸ªç‚¹æœ‰ä¸åŒçš„é¢œè‰²
 TEST_F(shaderTest, createTrangleMulti)
 {
     initGLFW();
@@ -143,10 +143,10 @@ TEST_F(shaderTest, createTrangleMulti)
         R"(E:\Code\opengl\OpenGlTest1\src\shader\shader_multi.fs)");
 
     float vertices[] = {
-        // Î»ÖÃ              // ÑÕÉ«
-        0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f, // ÓÒÏÂ
-        -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, // ×óÏÂ
-        0.0f,  0.5f, 0.0f, 0.0f, 0.0f, 1.0f // ¶¥²¿
+        // ä½ç½®              // é¢œè‰²
+        0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f, // å³ä¸‹
+        -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, // å·¦ä¸‹
+        0.0f,  0.5f, 0.0f, 0.0f, 0.0f, 1.0f // é¡¶éƒ¨
     };
 
     unsigned int indices[] = {
@@ -164,10 +164,10 @@ TEST_F(shaderTest, createTrangleMulti)
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
-    // Î»ÖÃÊôĞÔ
+    // ä½ç½®å±æ€§
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
-    // ÑÕÉ«ÊôĞÔ
+    // é¢œè‰²å±æ€§
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3* sizeof(float)));
     glEnableVertexAttribArray(1);
 
@@ -195,7 +195,7 @@ TEST_F(shaderTest, createTrangleMulti)
     glfwTerminate();
 }
 
-//´´½¨Èı½ÇĞÎ£¬Ã¿¸öµãÓĞ²»Í¬µÄÑÕÉ« - ÉÏÏÂµßµ¹
+//åˆ›å»ºä¸‰è§’å½¢ï¼Œæ¯ä¸ªç‚¹æœ‰ä¸åŒçš„é¢œè‰² - ä¸Šä¸‹é¢ å€’
 TEST_F(shaderTest, createTrangleMultiUpDown)
 {
     initGLFW();
@@ -204,10 +204,10 @@ TEST_F(shaderTest, createTrangleMultiUpDown)
         R"(E:\Code\opengl\OpenGlTest1\src\shader\shader_multi.fs)");
 
     float vertices[] = {
-        // Î»ÖÃ              // ÑÕÉ«
-        0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f, // ÓÒÏÂ
-        -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, // ×óÏÂ
-        0.0f,  0.5f, 0.0f, 0.0f, 0.0f, 1.0f // ¶¥²¿
+        // ä½ç½®              // é¢œè‰²
+        0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f, // å³ä¸‹
+        -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, // å·¦ä¸‹
+        0.0f,  0.5f, 0.0f, 0.0f, 0.0f, 1.0f // é¡¶éƒ¨
     };
 
     unsigned int indices[] = {
@@ -225,10 +225,10 @@ TEST_F(shaderTest, createTrangleMultiUpDown)
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
-    // Î»ÖÃÊôĞÔ
+    // ä½ç½®å±æ€§
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
-    // ÑÕÉ«ÊôĞÔ
+    // é¢œè‰²å±æ€§
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3* sizeof(float)));
     glEnableVertexAttribArray(1);
 
@@ -256,7 +256,7 @@ TEST_F(shaderTest, createTrangleMultiUpDown)
     glfwTerminate();
 }
 
-//´´½¨Èı½ÇĞÎ£¬Ã¿¸öµãÓĞ²»Í¬µÄÑÕÉ« - Ë®Æ½Æ«ÒÆ
+//åˆ›å»ºä¸‰è§’å½¢ï¼Œæ¯ä¸ªç‚¹æœ‰ä¸åŒçš„é¢œè‰² - æ°´å¹³åç§»
 TEST_F(shaderTest, createTrangleXoffset)
 {
     initGLFW();
@@ -265,10 +265,10 @@ TEST_F(shaderTest, createTrangleXoffset)
         R"(E:\Code\opengl\OpenGlTest1\src\shader\shader_multi.fs)");
 
     float vertices[] = {
-        // Î»ÖÃ              // ÑÕÉ«
-        0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f, // ÓÒÏÂ
-        -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, // ×óÏÂ
-        0.0f,  0.5f, 0.0f, 0.0f, 0.0f, 1.0f // ¶¥²¿
+        // ä½ç½®              // é¢œè‰²
+        0.5f, -0.5f, 0.0f, 1.0f, 0.0f, 0.0f, // å³ä¸‹
+        -0.5f, -0.5f, 0.0f, 0.0f, 1.0f, 0.0f, // å·¦ä¸‹
+        0.0f,  0.5f, 0.0f, 0.0f, 0.0f, 1.0f // é¡¶éƒ¨
     };
 
     unsigned int indices[] = {
@@ -286,10 +286,10 @@ TEST_F(shaderTest, createTrangleXoffset)
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
-    // Î»ÖÃÊôĞÔ
+    // ä½ç½®å±æ€§
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
-    // ÑÕÉ«ÊôĞÔ
+    // é¢œè‰²å±æ€§
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3* sizeof(float)));
     glEnableVertexAttribArray(1);
 
@@ -323,7 +323,7 @@ TEST_F(shaderTest, createTrangleXoffset)
     glfwTerminate();
 }
 
-//´´½¨Èı½ÇĞÎ£¬Ã¿¸öµãµÄÑÕÉ«ÊÇËü¶¥µãµÄÎ»ÖÃ
+//åˆ›å»ºä¸‰è§’å½¢ï¼Œæ¯ä¸ªç‚¹çš„é¢œè‰²æ˜¯å®ƒé¡¶ç‚¹çš„ä½ç½®
 TEST_F(shaderTest, createTranglePos2Color)
 {
     initGLFW();
@@ -332,7 +332,7 @@ TEST_F(shaderTest, createTranglePos2Color)
         R"(E:\Code\opengl\OpenGlTest1\src\shader\shader_pos_2_color.fs)");
 
     float vertices[] = {
-        // Î»ÖÃ
+        // ä½ç½®
         0.5f, -0.5f, 0.0f,
         -0.5f, -0.5f, 0.0f,
         0.0f, 0.5f, 0.0f
@@ -353,7 +353,7 @@ TEST_F(shaderTest, createTranglePos2Color)
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
-    // Î»ÖÃÊôĞÔ
+    // ä½ç½®å±æ€§
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
 
