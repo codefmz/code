@@ -1,8 +1,7 @@
 #ifndef _CONDITION_H_
 #define _CONDITION_H_
-#include <pthread.h>
 
-#include "mutex.h"
+#include "Mutex.h"
 
 class Condition
 {

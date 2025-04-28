@@ -1,7 +1,7 @@
 #include <sys/time.h>
 #include <time.h>
 
-#include "condition.h"
+#include "Condition.h"
 
 Condition* Condition::createNew()
 {

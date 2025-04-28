@@ -1,5 +1,5 @@
-#include "selectpoller.h"
-#include "log.h"
+#include "SelectPoller.h"
+#include "Log.h"
 
 static const int selectTimeout = 10000;
 

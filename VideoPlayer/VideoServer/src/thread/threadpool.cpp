@@ -1,5 +1,5 @@
-#include "threadpool.h"
-#include "log.h"
+#include "ThreadPool.h"
+#include "Log.h"
 
 ThreadPool* ThreadPool::createNew(int num)
 {

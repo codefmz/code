@@ -1,4 +1,4 @@
-#include "thread.h"
+#include "Thread.h"
 
 Thread::Thread() : mArg(NULL), mIsStart(false), mIsDetach(false)
 {

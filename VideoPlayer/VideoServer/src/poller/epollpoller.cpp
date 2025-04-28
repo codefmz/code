@@ -2,8 +2,8 @@
 #include <unistd.h>
 #include <string.h>
 
-#include "epollpoller.h"
-#include "log.h"
+#include "EpollPoller.h"
+#include "Log.h"
 
 static const int InitEventListSize = 16;
 static const int epollTimeout = 10000;

@@ -1,5 +1,5 @@
-#include "buffer.h"
-#include "socketops.h"
+#include "Buffer.h"
+#include "SocketOps.h"
 
 #include <unistd.h>
 
@@ -12,7 +12,7 @@ int Buffer::read(int fd)
     char extrabuf[65536];
     struct iovec vec[2];
     const int writable = writableBytes();
-    vec[0].iov_base = begin()+mWriteIndex;
+    vec[0].iov_base = begin() + mWriteIndex;
     vec[0].iov_len = writable;
     vec[1].iov_base = extrabuf;
     vec[1].iov_len = sizeof(extrabuf);

@@ -2,10 +2,10 @@
 #define _TCP_SERVER_H_
 #include <map>
 
-#include "acceptor.h"
-#include "poller.h"
-#include "address.h"
-#include "tcpconnection.h"
+#include "Acceptor.h"
+#include "Poller.h"
+#include "Address.h"
+#include "TcpConnection.h"
 
 class TcpServer
 {

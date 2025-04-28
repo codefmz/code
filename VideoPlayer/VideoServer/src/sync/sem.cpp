@@ -1,4 +1,4 @@
-#include "sem.h"
+#include "Sem.h"
 Sem* Sem::createNew(int val)
 {
     return new Sem(val);

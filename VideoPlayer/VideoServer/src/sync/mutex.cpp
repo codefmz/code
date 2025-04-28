@@ -1,4 +1,4 @@
-#include "mutex.h"
+#include "Mutex.h"
 
 Mutex* Mutex::createNew()
 {

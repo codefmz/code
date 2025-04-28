@@ -8,8 +8,8 @@
 #include <arpa/inet.h>
 #include <net/if.h>
 #include <string.h>
-#include "log.h"
-#include "socketops.h"
+#include "Log.h"
+#include "SocketOps.h"
 
 const std::string INVALID_ADDR = "0.0.0.0";
 

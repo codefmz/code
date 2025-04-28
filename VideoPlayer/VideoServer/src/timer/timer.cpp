@@ -1,7 +1,7 @@
 #include <sys/timerfd.h>
 
-#include "timer.h"
-#include "log.h"
+#include "Timer.h"
+#include "Log.h"
 
 static int timerFdCreate(int clockid, int flags)
 {

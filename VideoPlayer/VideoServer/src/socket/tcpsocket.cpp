@@ -1,7 +1,7 @@
 #include <unistd.h>
 
-#include "tcpsocket.h"
-#include "socketops.h"
+#include "TcpSocket.h"
+#include "SocketOps.h"
 
 TcpSocket::~TcpSocket()
 {

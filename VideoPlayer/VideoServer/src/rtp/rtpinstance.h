@@ -4,87 +4,84 @@
 #include <stdint.h>
 #include <unistd.h>
 
-#include "address.h"
-#include "socketops.h"
-#include "rtp.h"
+#include "Address.h"
+#include "SocketOps.h"
+#include "Rtp.h"
 
 class RtpInstance
 {
 public:
-    enum RtpType
-    {
+    typedef enum {
         RTP_OVER_UDP,
         RTP_OVER_TCP
-    };
+    } RtpType;
 
-    static RtpInstance* createNewOverUdp(int localSockfd, uint16_t localPort, std::string destIp, uint16_t destPort)
-    {
+    static RtpInstance* createNewOverUdp(int localSockfd, uint16_t localPort, std::string destIp, uint16_t destPort) {
         return new RtpInstance(localSockfd, localPort, destIp, destPort);
     }
 
-    static RtpInstance* createNewOverTcp(int clientSockfd, uint8_t rtpChannel)
-    {
+    static RtpInstance* createNewOverTcp(int clientSockfd, uint8_t rtpChannel) {
         return new RtpInstance(clientSockfd, rtpChannel);
     }
 
-    ~RtpInstance()
-    {
+    ~RtpInstance() {
         sockets::close(mSockfd);
     }
 
     uint16_t getLocalPort() const {
         return mLocalPort;
     }
-
     uint16_t getPeerPort() {
         return mDestAddr.getPort();
     }
 
-    int send(RtpPacket* rtpPacket)
-    {
-        if(mRtpType == RTP_OVER_UDP)
-        {
+    int send(RtpPacket* rtpPacket) {
+        if(mRtpType == RTP_OVER_UDP) {
             return sendOverUdp(rtpPacket->mBuffer, rtpPacket->mSize);
-        }
-        else
-        {
+        } else {
+            //不明白为什么这里需要加上这4个头节字
             uint8_t* rtpPktPtr = rtpPacket->_mBuffer;
             rtpPktPtr[0] = '$';
             rtpPktPtr[1] = (uint8_t)mRtpChannel;
-            rtpPktPtr[2] = (uint8_t)(((rtpPacket->mSize)&0xFF00)>>8);
-            rtpPktPtr[3] = (uint8_t)((rtpPacket->mSize)&0xFF);
-            return sendOverTcp(rtpPktPtr, rtpPacket->mSize+4);
+            rtpPktPtr[2] = (uint8_t)(((rtpPacket->mSize) & 0xFF00) >> 8); //包大小高16字节
+            rtpPktPtr[3] = (uint8_t)((rtpPacket->mSize) & 0xFF); //包大小低16字节
+            return sendOverTcp(rtpPktPtr, rtpPacket->mSize + 4);
         }
     }
 
-    bool alive() const { return mIsAlive; }
-    int setAlive(bool alive) { mIsAlive = alive; };
-    void setSessionId(uint16_t sessionId) { mSessionId = sessionId; }
-    uint16_t sessionId() const { return mSessionId; }
+    bool alive() const {
+        return mIsAlive;
+    }
+    int setAlive(bool alive) {
+        mIsAlive = alive;
+    };
+
+    void setSessionId(uint16_t sessionId) {
+        mSessionId = sessionId;
+    }
+
+    uint16_t sessionId() const {
+        return mSessionId;
+    }
 
 private:
-    int sendOverUdp(void* buf, int size)
-    {
+    int sendOverUdp(void* buf, int size) {
         return sockets::sendto(mSockfd, buf, size, mDestAddr.getAddr());
     }
 
-    int sendOverTcp(void* buf, int size)
-    {
+    int sendOverTcp(void* buf, int size) {
         return sockets::write(mSockfd, buf, size);
     }
 
 public:
     RtpInstance(int localSockfd, uint16_t localPort, const std::string& destIp, uint16_t destPort) :
         mRtpType(RTP_OVER_UDP), mSockfd(localSockfd), mLocalPort(localPort),
-        mDestAddr(destIp, destPort), mIsAlive(false), mSessionId(0)
-    {
+        mDestAddr(destIp, destPort), mIsAlive(false), mSessionId(0) {
 
     }
 
-    RtpInstance(int clientSockfd, uint8_t rtpChannel) :
-        mRtpType(RTP_OVER_TCP), mSockfd(clientSockfd),
-        mIsAlive(false), mSessionId(0), mRtpChannel(rtpChannel)
-    {
+    RtpInstance(int clientSockfd, uint8_t rtpChannel) : mRtpType(RTP_OVER_TCP), mSockfd(clientSockfd),
+        mIsAlive(false), mSessionId(0), mRtpChannel(rtpChannel) {
 
     }
 
@@ -101,41 +98,48 @@ private:
 class RtcpInstance
 {
 public:
-    static RtcpInstance* createNew(int localSockfd, uint16_t localPort,
-                                    std::string destIp, uint16_t destPort)
-    {
-        //return new RtcpInstance(localSockfd, localPort, destIp, destPort);
-        return New<RtcpInstance>::allocate(localSockfd, localPort, destIp, destPort);
+    static RtcpInstance* createNew(int localSockfd, uint16_t localPort, std::string destIp, uint16_t destPort) {
+        return new RtcpInstance(localSockfd, localPort, destIp, destPort);
     }
 
-    ~RtcpInstance()
-    {
+    ~RtcpInstance() {
         sockets::close(mLocalSockfd);
     }
 
-    int send(void* buf, int size)
-    {
+    int send(void* buf, int size) {
         return sockets::sendto(mLocalSockfd, buf, size, mDestAddr.getAddr());
     }
 
-    int recv(void* buf, int size, Ipv4Address* addr)
-    {
+    int recv(void* buf, int size, Ipv4Address* addr) {
         return 0;
     }
 
-    uint16_t getLocalPort() const { return mLocalPort; }
+    uint16_t getLocalPort() const {
+        return mLocalPort;
+    }
 
-    int alive() const { return mIsAlive; }
-    int setAlive(bool alive) { mIsAlive = alive; };
-    void setSessionId(uint16_t sessionId) { mSessionId = sessionId; }
-    uint16_t sessionId() const { return mSessionId; }
+    int alive() const {
+        return mIsAlive;
+    }
+
+    int setAlive(bool alive) {
+        mIsAlive = alive;
+    };
+
+    void setSessionId(uint16_t sessionId) {
+        mSessionId = sessionId;
+    }
+
+    uint16_t sessionId() const {
+        return mSessionId;
+    }
 
 public:
-    RtcpInstance(int localSockfd, uint16_t localPort,
-                    std::string destIp, uint16_t destPort) :
+    RtcpInstance(int localSockfd, uint16_t localPort, std::string destIp, uint16_t destPort) :
         mLocalSockfd(localSockfd), mLocalPort(localPort), mDestAddr(destIp, destPort),
-        mIsAlive(false), mSessionId(0)
-    {   }
+        mIsAlive(false), mSessionId(0) {
+
+    }
 
 private:
     int mLocalSockfd;

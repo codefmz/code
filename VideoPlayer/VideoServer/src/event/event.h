@@ -52,8 +52,7 @@ private:
 class IOEvent
 {
 public:
-    enum IOEventType
-    {
+    enum IOEventType {
         EVENT_NONE = 0,
         EVENT_READ = 1,
         EVENT_WRITE = 2,

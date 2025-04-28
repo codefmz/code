@@ -1,9 +1,9 @@
 #ifndef _TCP_CONNECTION_H_
 #define _TCP_CONNECTION_H_
-#include "poller.h"
-#include "event.h"
-#include "tcpsocket.h"
-#include "buffer.h"
+#include "Poller.h"
+#include "Event.h"
+#include "TcpSocket.h"
+#include "Buffer.h"
 
 class TcpConnection
 {

@@ -1,10 +1,9 @@
-#include "tcpconnection.h"
-#include "socketops.h"
-#include "log.h"
-
 #include <unistd.h>
 #include <stdlib.h>
 
+#include "TcpConnection.h"
+#include "SocketOps.h"
+#include "Log.h"
 TcpConnection::TcpConnection(Poller* poller, int sockfd) : mPoller(poller), mSocket(sockfd),
     mDisconnectionCallback(NULL), mArg(NULL)
 {

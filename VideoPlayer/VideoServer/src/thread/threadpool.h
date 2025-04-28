@@ -4,9 +4,9 @@
 #include <vector>
 
 #include <atomic>
-#include "thread.h"
-#include "mutex.h"
-#include "condition.h"
+#include "Thread.h"
+#include "Mutex.h"
+#include "Condition.h"
 
 class Task
 {

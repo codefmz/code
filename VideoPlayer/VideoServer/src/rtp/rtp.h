@@ -11,17 +11,17 @@
 #define RTP_HEADER_SIZE         12
 #define RTP_MAX_PKT_SIZE        1400
 
-struct RtpHeader
+typedef struct
 {
     /* byte 0 */
-    uint8_t csrcLen:4;
-    uint8_t extension:1;
-    uint8_t padding:1;
-    uint8_t version:2;
+    uint8_t csrcLen : 4;
+    uint8_t extension : 1;
+    uint8_t padding : 1;
+    uint8_t version : 2;
 
     /* byte 1 */
-    uint8_t payloadType:7;
-    uint8_t marker:1;
+    uint8_t payloadType : 7;
+    uint8_t marker : 1;
 
     /* bytes 2,3 */
     uint16_t seq;
@@ -34,7 +34,7 @@ struct RtpHeader
 
     /* data */
     uint8_t payload[0];
-};
+} RtpHeader;
 
 class RtpPacket
 {
@@ -45,8 +45,7 @@ public:
 
     }
 
-    ~RtpPacket()
-    {
+    ~RtpPacket() {
         delete _mBuffer;
     }
 

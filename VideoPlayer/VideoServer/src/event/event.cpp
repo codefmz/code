@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "event.h"
+#include "Event.h"
 
 TriggerEvent* TriggerEvent::createNew(void* arg)
 {
@@ -41,7 +41,9 @@ IOEvent* IOEvent::createNew(int fd, void* arg)
 IOEvent::IOEvent(int fd, void* arg) : mFd(fd), mArg(arg),
     mEvent(EVENT_NONE), mREvent(EVENT_NONE), mReadCallback(NULL),
     mWriteCallback(NULL), mErrorCallback(NULL)
-{ }
+{
+
+}
 
 void IOEvent::handleEvent()
 {

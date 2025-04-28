@@ -1,7 +1,7 @@
 
 #include <assert.h>
-#include "tcpserver.h"
-#include "log.h"
+#include "TcpServer.h"
+#include "Log.h"
 TcpServer::TcpServer(Poller* poller, const Ipv4Address& addr) : mPoller(poller), mAddr(addr)
 {
     mAcceptor = Acceptor::createNew(poller, addr);

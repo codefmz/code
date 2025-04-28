@@ -3,8 +3,8 @@
 #include <map>
 #include <stdint.h>
 
-#include "poller.h"
-#include "event.h"
+#include "Poller.h"
+#include "Event.h"
 
 typedef uint32_t TimerId;
 typedef int64_t Timestamp; //ms
