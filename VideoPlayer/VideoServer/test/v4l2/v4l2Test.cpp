@@ -33,7 +33,7 @@ TEST(v4l2Test, h264Server)
 
     //问题： 1. 控制连接与数据连接
     EventScheduler* scheduler = EventScheduler::createNew(EventScheduler::POLLER_SELECT);
-    ThreadPool* threadPool = ThreadPool::createNew(2);
+    ThreadPool* threadPool = ThreadPool::createNew(10);
 
     Ipv4Address ipAddr("0.0.0.0", 8554);
 

@@ -7,7 +7,7 @@
 #include "ThreadPool.h"
 
 #define FRAME_MAX_SIZE (1024 * 500)
-#define DEFAULT_FRAME_NUM 4
+#define DEFAULT_FRAME_NUM 20
 
 class AVFrame
 {

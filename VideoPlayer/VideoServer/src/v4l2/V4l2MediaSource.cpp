@@ -113,11 +113,11 @@ void V4l2MediaSource::readFrame()
 
     memcpy(frame->mBuffer, nalu.mData, nalu.mSize);
     if (startCode3(nalu.mData)) {
-        frame->mFrame = frame->mBuffer+3;
-        frame->mFrameSize = nalu.mSize-3;
+        frame->mFrame = frame->mBuffer + 3;
+        frame->mFrameSize = nalu.mSize - 3;
     } else {
-        frame->mFrame = frame->mBuffer+4;
-        frame->mFrameSize = nalu.mSize-4;
+        frame->mFrame = frame->mBuffer + 4;
+        frame->mFrameSize = nalu.mSize - 4;
     }
 
     mAVFrameInputQueue.pop();
