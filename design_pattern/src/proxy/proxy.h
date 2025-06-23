@@ -28,7 +28,7 @@ private:
     std::string name;
 
 public:
-    Proxy(std::string _name, Behaver* _behaver) name(_name), behaver(_behaver) {
+    Proxy(std::string _name, Behaver* _behaver) : name(_name), behaver(_behaver) {
     }
     virtual void GiveFlowers() override {
         std::cout << name << " 代替 ";

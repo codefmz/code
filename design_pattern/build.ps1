@@ -1,7 +1,7 @@
 param (
     [string]$t
 )
-chcp 65001
+# chcp 65001
 Write-Host "compile target : $t"
 cmake -Dtarget::STRING=$t -S . -B build
 cmake --build build --target $t

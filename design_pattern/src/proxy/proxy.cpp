@@ -1,4 +1,4 @@
-﻿#include "proxy.h"
+#include "proxy.h"
 #include "gtest/gtest.h"
 
 class proxyTest : public ::testing::Test {
